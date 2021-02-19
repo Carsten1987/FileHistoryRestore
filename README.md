@@ -3,15 +3,15 @@ Stelle Windows Dateiversionsverlauf an übergebenem Ort wieder her.
 Das hier vorliegende Python Skript iteriert über all Ordner aus einem Windows-Dateiversionsverlauf und kopiert die jeweils die neueste Datei 
 in den Zeilordner, unter Beibehaltung des Ursprünlgichen Pfades.
 Das Programm ruft man wie folgt auf:
-'''bash
+```bash
 python restore_filehistory.py --pathes D:\Backup\Data C:\NeuerOrt
-'''
+```
 Möchte man mehrere Backups wiederherstellen, so kann man dies in einer Konfigurationsdatei angeben und das Skript mittels
-'''bash
+```bash
 python restore_filehistory.py --config config.json
-'''
+```
 aufgerufen werden. Die JSON-Datei ist folgendermaßen aufzubauen:
-'''json
+```json
 [
     {
         "Source": "Pfad zu Backup 1",
@@ -22,30 +22,30 @@ aufgerufen werden. Die JSON-Datei ist folgendermaßen aufzubauen:
         "Target": "Pfad zu NeuerOrt 2",
     }
 ]
-'''
+```
 
 # FileHistoryRestore
 Restore Windows FileHistory to passed location.
 This Python script iterates over all folders from a Windows FileHistory and copies the most recent file 
 into the row folder, keeping the original path.
 The program is called as follows:
-'''bash
+```bash
 python restore_filehistory.py --paths D:\Backup\Data C:\NewLocation
-'''
+```
 If you want to restore multiple backups, you can specify this in a configuration file and run the script using
-'''bash
+```bash
 python restore_filehistory.py --config config.json
-'''
+```
 can be called. The JSON file should be constructed as follows:
-'''json
+```json
 [
     {
-        "'''source'': ''path to backup 1'',
-        "'''target'': ''path to NewLocation1''
+        "Source": "path to backup 1",
+        "Target": "path to NewLocation1"
     },
     {
         "Source": "Path to Backup 2",
-        "target": "path to NewLocation2",
+        "Target": "path to NewLocation2",
     }
 ]
-'''
+```
