@@ -79,7 +79,7 @@ def backup_from_config(config_file):
     with open(config_file) as file:
         config = json.load(file)
         for entry in config:
-            backup(entry.Source, entry.Target)
+            backup(entry["Source"], entry["Target"])
 
 
 if __name__ == "__main__":
